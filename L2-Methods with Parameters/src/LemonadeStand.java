@@ -25,14 +25,15 @@ public class LemonadeStand {
         int num16 = Integer.parseInt(JOptionPane.showInputDialog("How many 16 oz lemonades?"));
         int num20 = Integer.parseInt(JOptionPane.showInputDialog("How many 20 oz lemonades?"));
 
+        calculateCost(num16, num20);
 
-
+        System.exit(0);
     }
 
 
     public static void calculateCost(int num16, int num20) {
 
-        DecimalFormat round = new DecimalFormat("#,###.##");
+        DecimalFormat roundTo2 = new DecimalFormat("#,###.##");
 
 
         double cost16 = num16 * price16;
@@ -43,11 +44,9 @@ public class LemonadeStand {
 
         double total = total16 + total20;
 
-        String message = "Your Order: ";
-        message += "\n\t16 oz: " + round.format(num16);
-        message += "\n\t20 oz: " + round.format(num20);
-        message += "\n\ttotal : " + round.format(total);
-        JOptionPane.showMessageDialog(null, "The totals are " + message);
+        JOptionPane.showMessageDialog(null, "Your total cost for 16 oz. is: $" + roundTo2.format(total16));
+        JOptionPane.showMessageDialog(null, "Your total cost for 20 oz. is: $" + roundTo2.format(total20));
+        JOptionPane.showMessageDialog(null, "Your total cost is: $" + roundTo2.format(total));
 
     }
 

@@ -9,7 +9,7 @@ public class ArtworkGUI {
 
     public ArtworkGUI()
     {
-        frame = new JFrame("hell yeah:)");
+        frame = new JFrame("demarcus");
         frame.setSize(600,600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);

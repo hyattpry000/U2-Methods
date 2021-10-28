@@ -39,7 +39,7 @@ public class ArtworkGUI {
             super.paintComponent(g);
 
             g.setColor(Color.yellow);
-            g.fillOval(90,75,400,400);
+            g.fillOval(90,75,400,401);
 
             g.setColor(Color.black);
             g.fillOval(150,150,100,100);
